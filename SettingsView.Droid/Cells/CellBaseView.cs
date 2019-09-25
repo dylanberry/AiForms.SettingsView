@@ -97,7 +97,7 @@ namespace AiForms.Renderers.Droid
             CreateContentView();
         }
 
-        void CreateContentView()
+        protected virtual void CreateContentView()
         {
             var layoutInflater = (LayoutInflater)_Context.GetSystemService(Context.LayoutInflaterService);
             var contentView = layoutInflater.Inflate(Resource.Layout.CellBaseView, this, true);
@@ -133,6 +133,7 @@ namespace AiForms.Renderers.Droid
 
             _defaultTextColor = new Android.Graphics.Color(TitleLabel.CurrentTextColor);
             _defaultFontSize = TitleLabel.TextSize;
+
         }
 
         /// <summary>
